@@ -1,0 +1,11 @@
+---
+import Layout from "@/layouts/dashboard/Layout";
+
+if (!Astro.cookies.has('access')) {
+  return Astro.redirect('/api/user/login');
+}
+---
+
+<Layout client:only="react">
+    <h1>Content</h1>
+</Layout>
